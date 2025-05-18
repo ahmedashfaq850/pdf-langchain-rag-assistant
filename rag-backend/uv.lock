@@ -677,6 +677,30 @@ wheels = [
 ]
 
 [[package]]
+name = "gitdb"
+version = "4.0.12"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "smmap" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/72/94/63b0fc47eb32792c7ba1fe1b694daec9a63620db1e313033d18140c2320a/gitdb-4.0.12.tar.gz", hash = "sha256:5ef71f855d191a3326fcfbc0d5da835f26b13fbcba60c32c21091c349ffdb571", size = 394684 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a0/61/5c78b91c3143ed5c14207f463aecfc8f9dbb5092fb2869baf37c273b2705/gitdb-4.0.12-py3-none-any.whl", hash = "sha256:67073e15955400952c6565cc3e707c554a4eea2e428946f7a4c162fab9bd9bcf", size = 62794 },
+]
+
+[[package]]
+name = "gitpython"
+version = "3.1.44"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "gitdb" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c0/89/37df0b71473153574a5cdef8f242de422a0f5d26d7a9e231e6f169b4ad14/gitpython-3.1.44.tar.gz", hash = "sha256:c87e30b26253bf5418b01b0660f818967f3c503193838337fe5e573331249269", size = 214196 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1d/9a/4114a9057db2f1462d5c8f8390ab7383925fe1ac012eaa42402ad65c2963/GitPython-3.1.44-py3-none-any.whl", hash = "sha256:9e0e10cda9bed1ee64bc9a6de50e7e38a9c9943241cd7f585f6df3ed28011110", size = 207599 },
+]
+
+[[package]]
 name = "google-ai-generativelanguage"
 version = "0.6.18"
 source = { registry = "https://pypi.org/simple" }
@@ -771,6 +795,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/cd/41/96ba2bf948f67b245784cd294b84e3d17933597dffd3acdb367a210d1949/greenlet-3.2.2-cp313-cp313t-musllinux_1_1_aarch64.whl", hash = "sha256:b50a8c5c162469c3209e5ec92ee4f95c8231b11db6a04db09bbe338176723bb8", size = 1105752 },
     { url = "https://files.pythonhosted.org/packages/68/3b/3b97f9d33c1f2eb081759da62bd6162159db260f602f048bc2f36b4c453e/greenlet-3.2.2-cp313-cp313t-musllinux_1_1_x86_64.whl", hash = "sha256:45f9f4853fb4cc46783085261c9ec4706628f3b57de3e68bae03e8f8b3c0de51", size = 1125170 },
     { url = "https://files.pythonhosted.org/packages/31/df/b7d17d66c8d0f578d2885a3d8f565e9e4725eacc9d3fdc946d0031c055c4/greenlet-3.2.2-cp314-cp314-macosx_11_0_universal2.whl", hash = "sha256:9ea5231428af34226c05f927e16fc7f6fa5e39e3ad3cd24ffa48ba53a47f4240", size = 269899 },
+]
+
+[[package]]
+name = "gritql"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/de/f6/9d485d595a049feabc5bd85c37713b2c1509aa61448fb737f791081624f3/gritql-0.2.0.tar.gz", hash = "sha256:09e26e3d3152d3ec2e4fa80c0af4f2fe1436c82a2c6343cec6ab74ae61474bae", size = 3780 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/22/45/f3bfad1cf462d85a9ba3be5cb8b7fd5e6bf4e67f7a24cf00ae53ee6da86e/gritql-0.2.0-py2.py3-none-any.whl", hash = "sha256:6a37f4a6388c09801c25de8753546ca11d4b8a3ad527742821eb032ad069cd13", size = 5162 },
 ]
 
 [[package]]
@@ -1066,6 +1099,37 @@ wheels = [
 ]
 
 [[package]]
+name = "langchain-chroma"
+version = "0.2.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "chromadb" },
+    { name = "langchain-core" },
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4c/2c/7e81227945e6bb0fe09b1a858dbcdcd9cef7e9ffcf4a1b5974c8d51bf9bc/langchain_chroma-0.2.4.tar.gz", hash = "sha256:d021ebf743969f6c2887b3878e829d1814d770e2bbf8e22df7d8cce15efed0d7", size = 15769 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/61/70/384bcdcaac7cb74e239a8411a9bd16079c7e0d9174391d66c635c45514f4/langchain_chroma-0.2.4-py3-none-any.whl", hash = "sha256:8bd5316ab415ff7c6ac911d2069926a54777aa4a04f69239a422415c02d1feeb", size = 11285 },
+]
+
+[[package]]
+name = "langchain-cli"
+version = "0.0.36"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "gitpython" },
+    { name = "gritql" },
+    { name = "langserve", extra = ["all"] },
+    { name = "tomlkit" },
+    { name = "typer" },
+    { name = "uvicorn" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/70/af/5d355121c79997e7e51116cbab4f9f164b604b5fc83cf47cf6bf521f8c1e/langchain_cli-0.0.36.tar.gz", hash = "sha256:67784fdef1fad9ff841cbc5a670cb54f56f0618fca79b9f5c3776c7eee8efe09", size = 85151 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e9/be/261e768b70daa24c5f524ca1b9ba9b93029063f6d1ad45f39b3d53071cab/langchain_cli-0.0.36-py3-none-any.whl", hash = "sha256:3c0981cc2931a55b6e7b95b1234425df75c19376b9540081d56472d474f8dd24", size = 120247 },
+]
+
+[[package]]
 name = "langchain-community"
 version = "0.3.24"
 source = { registry = "https://pypi.org/simple" }
@@ -1122,6 +1186,22 @@ wheels = [
 ]
 
 [[package]]
+name = "langchain-huggingface"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "huggingface-hub" },
+    { name = "langchain-core" },
+    { name = "sentence-transformers" },
+    { name = "tokenizers" },
+    { name = "transformers" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/41/a9/37f23321b776fe40a6b15a6476bc8537d255581793a3accc001725edd8bd/langchain_huggingface-0.2.0.tar.gz", hash = "sha256:609acbfbade749bffa22acffd46d9e924a58e96cc59215d0562b8e9215b210f5", size = 24799 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0b/76/eb08f7b87f3377ced3800b2896841ccdcde3e246f46523946ecf092447e6/langchain_huggingface-0.2.0-py3-none-any.whl", hash = "sha256:eed1fdfe51d16d761499fa754491a1a4dcb61798c1e5516335071d1dad852a41", size = 27329 },
+]
+
+[[package]]
 name = "langchain-text-splitters"
 version = "0.3.8"
 source = { registry = "https://pypi.org/simple" }
@@ -1141,6 +1221,27 @@ dependencies = [
     { name = "six" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/0e/72/a3add0e4eec4eb9e2569554f7c70f4a3c27712f40e3284d483e88094cc0e/langdetect-1.0.9.tar.gz", hash = "sha256:cbc1fef89f8d062739774bd51eda3da3274006b3661d199c2655f6b3f6d605a0", size = 981474 }
+
+[[package]]
+name = "langserve"
+version = "0.3.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "langchain-core" },
+    { name = "orjson" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8c/4f/465c21b7ab4ab18d9bf59f2804f7dc599a52462beb53ba84180f7d2bf581/langserve-0.3.1.tar.gz", hash = "sha256:17bf7f7d7c182623298748c2eab176c4c0e1872e20f88be89ba89a962c94988d", size = 1141070 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/89/e4/6a26851d96c445d783d188c330cb871b56f03b18824ad8fadf6452d18a88/langserve-0.3.1-py3-none-any.whl", hash = "sha256:c860435ebbcc2c051c3e34c349c9d6020921a8af9216ad17700b58dbd01be9a2", size = 1173074 },
+]
+
+[package.optional-dependencies]
+all = [
+    { name = "fastapi" },
+    { name = "sse-starlette" },
+]
 
 [[package]]
 name = "langsmith"
@@ -2247,8 +2348,12 @@ dependencies = [
     { name = "dotenv" },
     { name = "fastapi", extra = ["standard"] },
     { name = "langchain" },
+    { name = "langchain-chroma" },
+    { name = "langchain-cli" },
     { name = "langchain-community" },
+    { name = "langchain-core" },
     { name = "langchain-google-genai" },
+    { name = "langchain-huggingface" },
     { name = "langchain-text-splitters" },
     { name = "pydantic" },
     { name = "pypdf" },
@@ -2266,8 +2371,12 @@ requires-dist = [
     { name = "dotenv", specifier = ">=0.9.9" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.115.9" },
     { name = "langchain", specifier = ">=0.3.25" },
+    { name = "langchain-chroma", specifier = ">=0.2.4" },
+    { name = "langchain-cli", specifier = ">=0.0.36" },
     { name = "langchain-community", specifier = ">=0.3.24" },
+    { name = "langchain-core", specifier = ">=0.3.60" },
     { name = "langchain-google-genai", specifier = ">=2.1.4" },
+    { name = "langchain-huggingface", specifier = ">=0.2.0" },
     { name = "langchain-text-splitters", specifier = ">=0.3.8" },
     { name = "pydantic", specifier = ">=2.11.4" },
     { name = "pypdf", specifier = ">=5.5.0" },
@@ -2628,6 +2737,15 @@ wheels = [
 ]
 
 [[package]]
+name = "smmap"
+version = "5.0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/44/cd/a040c4b3119bbe532e5b0732286f805445375489fceaec1f48306068ee3b/smmap-5.0.2.tar.gz", hash = "sha256:26ea65a03958fa0c8a1c7e8c7a58fdc77221b8910f6be2131affade476898ad5", size = 22329 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl", hash = "sha256:b30115f0def7d7531d22a0fb6502488d879e75b260a9db4d0819cfb25403af5e", size = 24303 },
+]
+
+[[package]]
 name = "sniffio"
 version = "1.3.1"
 source = { registry = "https://pypi.org/simple" }
@@ -2672,6 +2790,21 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/fa/2e/677c17c5d6a004c3c45334ab1dbe7b7deb834430b282b8a0f75ae220c8eb/sqlalchemy-2.0.41-cp313-cp313-win32.whl", hash = "sha256:bfc9064f6658a3d1cadeaa0ba07570b83ce6801a1314985bf98ec9b95d74e15f", size = 2082420 },
     { url = "https://files.pythonhosted.org/packages/e9/61/e8c1b9b6307c57157d328dd8b8348ddc4c47ffdf1279365a13b2b98b8049/sqlalchemy-2.0.41-cp313-cp313-win_amd64.whl", hash = "sha256:82ca366a844eb551daff9d2e6e7a9e5e76d2612c8564f58db6c19a726869c1df", size = 2108329 },
     { url = "https://files.pythonhosted.org/packages/1c/fc/9ba22f01b5cdacc8f5ed0d22304718d2c758fce3fd49a5372b886a86f37c/sqlalchemy-2.0.41-py3-none-any.whl", hash = "sha256:57df5dc6fdb5ed1a88a1ed2195fd31927e705cad62dedd86b46972752a80f576", size = 1911224 },
+]
+
+[[package]]
+name = "sse-starlette"
+version = "1.8.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "anyio" },
+    { name = "fastapi" },
+    { name = "starlette" },
+    { name = "uvicorn" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/18/5b/f703fd3d1b3207e49b6f992b6c4a72b79a3602129f8ebb0dd8feaa8bc52f/sse_starlette-1.8.2.tar.gz", hash = "sha256:e0f9b8dec41adc092a0a6e0694334bd3cfd3084c44c497a6ebc1fb4bdd919acd", size = 17159 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/34/7e/d6087916bf58a4343459b47807a116a3a755e6ddd4857f375547e00f6252/sse_starlette-1.8.2-py3-none-any.whl", hash = "sha256:70cc7ef5aca4abe8a25dec1284cce4fe644dd7bf0c406d3e852e516092b7f849", size = 8928 },
 ]
 
 [[package]]
@@ -2739,6 +2872,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5f/aa/8ae85f69a9f6012c6f8011c6f4aa1c96154c816e9eea2e1b758601157833/tokenizers-0.21.1-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:e5a69c1a4496b81a5ee5d2c1f3f7fbdf95e90a0196101b0ee89ed9956b8a168f", size = 9384380 },
     { url = "https://files.pythonhosted.org/packages/e8/5b/a5d98c89f747455e8b7a9504910c865d5e51da55e825a7ae641fb5ff0a58/tokenizers-0.21.1-cp39-abi3-win32.whl", hash = "sha256:1039a3a5734944e09de1d48761ade94e00d0fa760c0e0551151d4dd851ba63e3", size = 2239506 },
     { url = "https://files.pythonhosted.org/packages/e6/b6/072a8e053ae600dcc2ac0da81a23548e3b523301a442a6ca900e92ac35be/tokenizers-0.21.1-cp39-abi3-win_amd64.whl", hash = "sha256:0f0dcbcc9f6e13e675a66d7a5f2f225a736745ce484c1a4e07476a89ccdad382", size = 2435481 },
+]
+
+[[package]]
+name = "tomlkit"
+version = "0.13.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b1/09/a439bec5888f00a54b8b9f05fa94d7f901d6735ef4e55dcec9bc37b5d8fa/tomlkit-0.13.2.tar.gz", hash = "sha256:fff5fe59a87295b278abd31bec92c15d9bc4a06885ab12bcea52c71119392e79", size = 192885 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f9/b6/a447b5e4ec71e13871be01ba81f5dfc9d0af7e473da256ff46bc0e24026f/tomlkit-0.13.2-py3-none-any.whl", hash = "sha256:7a974427f6e119197f670fbbbeae7bef749a6c14e793db934baefc1b5f03efde", size = 37955 },
 ]
 
 [[package]]
