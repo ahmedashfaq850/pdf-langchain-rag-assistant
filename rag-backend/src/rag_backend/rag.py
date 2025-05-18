@@ -61,9 +61,6 @@ def build_rag_pipeline():
     return result
 
 
-print(build_rag_pipeline())
-
-
 def retrieve_answer(vector_store, input_query):
     retrieval_qa_chat_prompt = hub.pull("langchain-ai/retrieval-qa-chat")
     llm = llm_model
