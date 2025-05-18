@@ -30,7 +30,7 @@ dependencies = [
 ]
 
 [project.scripts]
-rag-backend = "rag_backend:main"
+rag-backend = "rag-backend:main"
 
 [build-system]
 requires = ["hatchling"]
